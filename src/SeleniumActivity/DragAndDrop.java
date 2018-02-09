@@ -30,7 +30,7 @@ public class DragAndDrop {
 		
 		WebElement drop = driver.findElement(By.id("droppable"));
 		
-		act.contextClick(drag);
+		act.clickAndHold(drag).moveToElement(drop).release(drag).build().perform();
 		
 		Thread.sleep(3000);
 		
